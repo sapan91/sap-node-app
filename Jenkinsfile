@@ -4,8 +4,8 @@ pipeline {
 		stage ("build") {
 		steps {
 			
-			sh 'sudo npm install'
-			sh 'sudp nmp run build'
+			sh 'npm install'
+			sh 'nmp run build'
 			echo "Building complete"
 
 }
