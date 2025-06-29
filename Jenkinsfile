@@ -3,8 +3,9 @@ pipeline {
 		stages{
 		stage ("build") {
 		steps {
+			
 			sh 'npm install'
-			sh 'nmp run build'
+			sh 'npm run build'
 			echo "Building complete"
 
 }
