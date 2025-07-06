@@ -6,7 +6,7 @@ pipeline {
 		EC2_HOST = '13.233.227.213'
 		SSH_CREDENTIAL_ID = 'ec2-ssh-key'
 	}
-		stages{
+		stages {
 		stage ("build") {
 		steps {
 			
@@ -15,7 +15,7 @@ pipeline {
 			echo "Building complete"
 		}
 		
-		stage ("Deploy")	
+		stage ("Deploy") {	
 		steps { 
 		echo "Strat Deployment on EC2"
 		sshagent(['ec2-ssh-key']) {
@@ -27,6 +27,7 @@ pipeline {
 			'''
 		}
 			echo "Deployment Completed"
+		}
 		}
 
 }
