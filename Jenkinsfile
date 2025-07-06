@@ -15,7 +15,7 @@ pipeline {
 			echo "Building complete"
 		}
 		
-		stage (Deploy)	
+		stage ("Deploy")	
 		steps { 
 		echo "Strat Deployment on EC2"
 		sshagent(['ec2-ssh-key']) {
