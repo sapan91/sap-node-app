@@ -9,7 +9,7 @@ pipeline {
 			echo "Building complete"
 		}
 		stage ("Deploy"){
-		steps{ 
+		steps { 
 		echo "Strat Deployment on EC2"
 		sh "scp -r -o strictcheckingOfKey=No" ./dist/* /home/ubuntu/node-app/"
 		sh "npm start"
