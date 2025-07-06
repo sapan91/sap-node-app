@@ -7,6 +7,7 @@ pipeline {
 			sh 'npm install'
 			sh 'npm run build'
 			echo "Building complete"
+		}
 		stage ("Deploy"){
 		steps{ 
 		echo "Strat Deployment on EC2"
@@ -20,4 +21,3 @@ pipeline {
 }
 }
 		
-}
