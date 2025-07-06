@@ -19,12 +19,12 @@ pipeline {
 		steps { 
 		echo "Strat Deployment on EC2"
 		sshagent(['ec2-ssh-key']) {
-			sh ...
+			sh '''
 				echo "Copying build artifacts to EC2"
 				scp -o strictHostKeyChecking=no -r dist/ ubuntu@13.233.227.213:/var/www/html
 				echo "Restarting web server on EC2"
 				ssh -o strictHostKeyChecking=no ubuntu@13.233.227.213 'sudo systemctl restart nginx'
-			
+			'''
 		}
 			echo "Deployment Completed"
 		}
