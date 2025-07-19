@@ -40,7 +40,7 @@ agent any
        		sudo systemctl restart nginx
 		'
   	"""
-  		
+				}
 	/*	
 steps {
 	echo 'Deploying build to local web server'
