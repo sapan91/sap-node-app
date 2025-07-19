@@ -8,8 +8,8 @@ agent any
 		}
 	
 	stages {
-		stage ("Build")
-		step{
+		stage ("Build") {
+		steps {
 		echo 'Installing dependencies...'
 		sh 'npm install'
 		echo 'Building the application'
