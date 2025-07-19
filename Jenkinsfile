@@ -4,7 +4,7 @@ agent any
 
 	environment {
 		DEPLOY_DIR = '/var/www/html'
-		SERVICE_NAME = 'ngix'
+		SERVICE_NAME = 'nginx'
 		}
 	
 	stages {
@@ -25,8 +25,8 @@ steps {
 
 	sh '''
 	echo "Copying build to $DEPLY_DIR"
-	sudo rm -rf ${DEPLOY_DIR}
-	sudo cp -r dist/* ${DEPLOY_DIR}
+	sudo rm -rf ${DEPLOY_DIR}/*
+	sudo cp -r dist/* ${DEPLOY_DIR}/
 	echo "Restarting $SERVICE_NAME"
 	sudo systemctl restart ${SERVICE_NAME}
 	'''
