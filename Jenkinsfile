@@ -52,10 +52,9 @@ steps {
 	echo "Restarting $SERVICE_NAME"
 	sudo systemctl restart ${SERVICE_NAME}
 	'''
-
+*/
 	echo 'Deployment Completed'
 	}
- */
 }
 }
 }
